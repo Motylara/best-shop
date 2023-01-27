@@ -32,6 +32,12 @@ h5 {
     font-weight: 300;
 
 }
+h6 {
+    color: #08A6E4;
+    font: 11px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
 
 .container {
     max-width: 1352px;
@@ -432,18 +438,139 @@ li:before {
 
 input {
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-bottom: 1px solid #D1D1D1;
+    border-bottom: 1px solid #95989A;
+    border-top: none;
+    border-right: none;
+    border-left: none;
     padding: 11px;
-    margin: 11px;
+    margin: 30px 0px;
     width: 100%;
     outline: none;
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="textarea"]:focus {
-    box-shadow: 0px 1px 6px #FF00004D;
-    border-bottom: 1px solid #FF0000;
+
+    border-bottom: 2px solid #08A6E4;
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }
 
-[type="checkbox"], [type="radio"] {
+[type="checkbox"] {
     width: auto;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+
+}
+
+.form__consent {
+    margin-top: 30px;
+}
+
+.form__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.375rem;
+}
+
+.form__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form__checkbox .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+}
+
+.form__checkbox input:checked ~ .checkbox {
+    background-image: url(../assets/Checkmark.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.form__checkbox .consent__text {
+    margin: 0 10px;
+    font-size: 0.75rem;
+    color: var(--color-grey);
+    line-height: 17px;
+}
+
+.form .btn {
+    font-size: 0.8125rem;
+    padding: 20px 97px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-left {
+    padding: 4%;
+    width: 50%;
+}
+
+.contact-right {
+    padding: 4%;
+    width: 50%;
+}
+
+.check-form-box {
+    line-height: 26px;
+}
+.contact-content {
+
+    display: flex;
+    justify-content: space-around;
+    color: #A5A5A5;
+    gap: 5%
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact-content-space {
+    padding-top: 42px;
+    padding-bottom: 22px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+.button-contact {
+    padding: 1em 5em;
+    box-shadow: 5px 10px 14px #07ace629;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    float: right;
 }
